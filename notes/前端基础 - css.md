@@ -309,6 +309,33 @@ div,span,td{
 所有符合以上标签或者选择器的内容都将使用以上格式
 ```
 
+
+#### VI. 属性选择器
+
+选择器|描述
+-|-
+[attribute]				|**指定属性**的元素。
+[attribute =value]			|**指定属性和值**的元素。
+[attribute ~=value]		|**包含指定词汇**的元素。
+[attribute丨=value]		|**指定值开头的属性值**的元素，该值必须是整个单词。
+[attribute ^=value]		|值**以指定值开头**的每个元素。
+[attribute $=value]		|值**以指定值结尾**的每个元素。
+[attribute * =value]		|值**包含指定值**的每个元素。
+标签名[attribute * =value]	|**指定标签**的**指定参数** **包含指定值**的每个元素。(**没有空格,标签对以上情况也适用**)
+```
+[属性]{
+	color:red;
+}
+
+[属性="特定值"]{
+	color:red;
+}
+
+[属性~="包含指定值"]{
+	color:red;
+}
+...
+```
 ---
 ### 盒模型 ###
 ![盒模型](http://image.bubuko.com/info/201802/20180220195838534266.png)
@@ -357,44 +384,6 @@ div,span,td{
 - **两个盒子<font color=red>垂直相邻</font>，<font color=red>外边距以二者margin的最大值为准</font>；**
 
 ---
-### 附录之  `background` ###
-- 属性连写：除了**固定数值参数**，其他参数没有顺序可言。
-
-	```
-	background: url(img/HBuilder.png) red repeat-x 20px 20px;
-	```
-- `background-color`
-- `background-image`: **必须设置宽高**
-
-	```
-	width: 500px;
-	height: 200px;
-	background-image: url(img/HBuilder.png);
-	```
-- `background-repeat`
-
-	- `repeat` （默认值）
-	- `no-repeat` （不重复平铺）
-	- `repeat-x` （横向重复平铺）
-	- `repeat-y `（纵向重复平铺）
-	<br>
-- `background-position`: **背景位置的设置 , 同时设置两个固定数值参数时分别代表水平和竖直的位置 ;** 
-	参数包括：固定数值，center，left，right，top，bottom , 
-	
-	```
-	background-position: center center;
-	background-position: bottom right;
-	background-position: 30% 20%;
-	background-position: 30px 20px;
-	background-position-x: center;
-	background-position-y: center;
-	```
-- `background-attachment` ：**是否固定背景**
-
-	- `Scroll`（默认值）滚动 
-	- `fixed` （图片固定）
-
-
-	
-
+#### [IV. outline](http://www.w3school.com.cn/css/css_outline.asp) ####
+详情点击链接。
 ---
