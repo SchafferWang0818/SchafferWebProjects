@@ -23,6 +23,7 @@ CSS(Cascading Style Sheets)，以html为基础的层叠样式表，用于网页�
 	
 		```
 		<div style="color: red; font-size: 20px; width: 100%; height: 100%;">什么鬼5</div>
+
 		```
 	
 	- 外联式
@@ -148,6 +149,7 @@ CSS(Cascading Style Sheets)，以html为基础的层叠样式表，用于网页�
 ##### II. ❤ 类选择器❤ 与 ❤伪类选择器 ❤
 - 类选择器
 	**一个标签可以调用多个类样式，之间用空格隔开。**
+
 	```
 		.自定义类名{属性:值; 属性:值; ...}
 		
@@ -371,6 +373,8 @@ div,span,td{
 	- `solid`		实线
 	- `dotted`		点线
 	- `dashed`		虚线
+	- `hidden`		与none 相同,解决应用于表时边框的冲突
+	- `double`		双线的宽度等于 border-width 的值。
 - border-color:		边框颜色
 
 #### III. margin ####
@@ -383,8 +387,29 @@ div,span,td{
 	```
 - **两个盒子<font color=red>垂直相邻</font>，<font color=red>外边距以二者margin的最大值为准</font>；**
 
+- margin的相邻合并与嵌套合并
+
+	![相邻合并](http://www.w3school.com.cn/i/ct_css_margin_collapsing_example_1.gif)
+	![嵌套合并](http://www.w3school.com.cn/i/ct_css_margin_collapsing_example_2.gif)
+
+- 空元素的上下margin合并_与_和其他margin合并
+
+	![空元素的上下margin合并](http://www.w3school.com.cn/i/ct_css_margin_collapsing_example_3.gif)
+	![空元素和其他margin合并](http://www.w3school.com.cn/i/ct_css_margin_collapsing_example_4.gif)
+
+- <font color=red>只有普通文档流中块框的**垂直外边距**才会发生外边距合并。**行内框、浮动框或绝对定位之间的外边距不会合并。**</font>
+
 ---
 #### [IV. outline](http://www.w3school.com.cn/css/css_outline.asp) ####
 详情点击链接。
+
+---
+### [定位方式](http://www.w3school.com.cn/cssref/pr_class_position.asp) ###
+定位方式由`position`属性决定,包括 绝对定位 和 相对定位。
+
+
+
+
+
 
 ---
