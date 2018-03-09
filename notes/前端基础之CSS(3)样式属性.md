@@ -107,6 +107,7 @@ armenian			|	有序：传统的亚美尼亚编号方式
 
 属性				|	描述
 			:-		|	:-
+`visibility`			|	**应用于行是否可见**<br>`visibility : collapse`不可见，收缩空间<br>`visibility : hidden` 不可见，保留空间<br>`visibility : visible` 可见 
 **`border-collapse`**	|	**设置是否把表格边框合并为单一的边框。<br> `= collapse` 合并内外部边框；<br> `= separate` 显示内外部边框；**
 **`text-align`**		|	文字**左、中、右**对齐
 **`vertical-align`**	|	文字**上、中、下**对齐
@@ -115,6 +116,14 @@ armenian			|	有序：传统的亚美尼亚编号方式
 `empty-cells`			|	设置是否显示表格中的空单元格。<br> `= hide` 隐藏空的单元格；<br> `= show` 显示空的单元格；
 `table-layout`			|	设置显示单元、行和列的算法。
 ---
+## 动作变换(transform) ##
 
-
+### 旋转(rotate) ###
+```
+transform:rotate(30deg);
+-ms-transform:rotate(30deg); /* IE 9 */
+-moz-transform:rotate(30deg); /* Firefox */
+-webkit-transform:rotate(30deg); /* Safari and Chrome */
+-o-transform:rotate(30deg); /* Opera */
+```
 ---

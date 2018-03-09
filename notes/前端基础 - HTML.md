@@ -43,11 +43,30 @@ HTM：早起系统不支持四位写法。
 
 根据 **显示方式的不同** 可分为:(可以通过"`display`"属性互相转换)
 
-- **块级元素(block) **: **<font color=red>元素独占一行</font>，可以设置宽高，子块级元素默认完全填充父层级**。例如：`div，p，li，h1...`
-	
-- **行内元素(inline)**: 与其他行内元素共享同一行，设置宽高不生效。例如：`span，strong，font，a...`
-	**行内元素可以使用 "`display: inline-block;`" <font color=red>转换为行内块元素时宽高生效</font>**
-- **行内块元素(inline-block)** : 与其他行内元素共享同一行，可以设置宽高。例如：`input，image ...`
+- **块级元素(block) **。例如：`div，p，li，h1...`
+	<br>
+	- 独占一行，子块级元素默认完全填充父层级
+	- 宽高		生效
+	- margin		生效
+	- padding	生效
+	<br>
+- **行内元素(inline)**。例如：`span，strong，font，a...`
+	<br>
+	- 内容(文字)展开 	分享一行
+	- 宽高无效	自适应
+	- margin		左右生效 , 上下无效
+	- padding	左右生效 , 上下无效
+	<br>
+- **行内块元素(inline-block)** 。 例如：`input，image ...`
+	<br>
+	- 将内容(文字)根据宽高设置成块 ,
+		-  rest_width_of_line _Last_inline_block_is_at <  	width_of_current  , 另换一行 ; 
+		-  rest_width_of_line _Last_inline_block_is_at >= width_of_current , 放置到同一行 ; 
+	- 宽高生效
+	- margin		生效
+	- padding	生效
+	<br>
+- 不显示(none)	
 
 #### 标签解析 ####
 - 单标签:

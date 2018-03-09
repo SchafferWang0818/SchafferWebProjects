@@ -48,6 +48,8 @@ table,th,tr,td{
 	font-size: 30px;
 	text-align: center;
 	margin: 20px;
+	transform: rotate(20);
+	-webkit-transform:rotate(-361deg);
 }
 th,td{
 	width: 100px;
@@ -68,4 +70,15 @@ tr.tr1 td{
 	background: deeppink;
 }
 
+h2.pos_abs
+{
+position:absolute;
+left:0px;
+top:0px
+}
+
+tr{
+	/*visibility: ;*/
+	/*hidden 空 visible 可见 collapse 无空  */
+}
 
