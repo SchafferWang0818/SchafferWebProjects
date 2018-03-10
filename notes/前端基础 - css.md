@@ -1,4 +1,4 @@
-# 前端基础 - css #
+# 前端基础 - css(3) #
 CSS(Cascading Style Sheets)，以html为基础的层叠样式表，用于网页布局。
 
 - 主要内容包含:
@@ -179,16 +179,8 @@ CSS(Cascading Style Sheets)，以html为基础的层叠样式表，用于网页�
 	- 类名不能包含汉字；
 	- 类名不建议使用标签名或属性名；
 
-
-
 - 伪类选择器
-	<font color=red>
 	**伪类选择器用于有超链接的标签**。
-	**a:hover 必须位于 a:link 和 a:visited 之后才能生效；**
-	**a:active 必须位于 a:hover 之后才能生效；**
-
-	</font>
-	
 	```
 	/*默认样式*/
 	a{
@@ -199,16 +191,16 @@ CSS(Cascading Style Sheets)，以html为基础的层叠样式表，用于网页�
 	}
 	/*默认样式*/
 	a:link{}
-		
-	/*访问过后的样式,缓存可能造成影响*/
-	a:visited{}
 	
 	/*鼠标放到超链接上的样式*/		
 	a:hover{}
 	
 	/*激活(点击未松开鼠标)状态下的样式*/		
 	a:active{}
-
+	
+	/*访问过后的样式,缓存可能造成影响*/
+	a:visited{}
+	
 	/*(不重要) 获取焦点（光标）的时候的样式*/	
 	a:focus{}
 	```
@@ -328,8 +320,8 @@ div,span,td{
 [attribute =value]			|**指定属性和值**的元素。
 [attribute ~=value]		|**包含指定词汇**的元素。
 [attribute丨=value]		|**指定值开头的属性值**的元素，该值必须是整个单词。
-[attribute ^ =value]		|值**以指定值开头**的每个元素。
-[attribute $ =value]		|值**以指定值结尾**的每个元素。
+[attribute ^=value]		|值**以指定值开头**的每个元素。
+[attribute $=value]		|值**以指定值结尾**的每个元素。
 [attribute * =value]		|值**包含指定值**的每个元素。
 标签名[attribute * =value]	|**指定标签**的**指定参数** **包含指定值**的每个元素。(**没有空格,标签对以上情况也适用**)
 ```
@@ -346,10 +338,6 @@ div,span,td{
 }
 ...
 ```
----
-### 其他选择器 ###
-#### [相邻兄弟选择器 `" + "  `](http://www.w3school.com.cn/css/css_selector_adjacent_sibling.asp) ####
-#### [伪元素选择器 `" : " `](http://www.w3school.com.cn/css/css_pseudo_elements.asp) ####
 ---
 ### 盒模型 ###
 ![盒模型](http://image.bubuko.com/info/201802/20180220195838534266.png)
@@ -380,14 +368,22 @@ div,span,td{
 	border-top-width: 1px;
 	...
 ```
-- border-width:   边框宽度
-- border-style:    边框样式
-	- `solid`		实线
-	- `dotted`		点线
-	- `dashed`		虚线
-	- `hidden`		与none 相同,解决应用于表时边框的冲突
-	- `double`		双线的宽度等于 border-width 的值。
-- border-color:		边框颜色
+- border-width:   		边框宽度
+- border-style:    		边框样式
+	- `solid`				实线
+	- `dotted`				点线
+	- `dashed`				虚线
+	- `hidden`				与none 相同,解决应用于表时边框的冲突
+	- `double`				双线的宽度等于 border-width 的值。
+- border-color:			边框颜色
+- (css3)border-radius:	创建圆角
+- (css3)box-shadow: 	h-shadow(水平) v-shadow(竖直) blur(模糊距离) spread(阴影尺寸) color(阴影颜色) inset(外/内部阴影)的组合;
+- (css3)border-image
+- (css3)border-image-source	用在边框的图片的路径。	
+- (css3)border-image-slice	图片边框向内偏移。	
+- (css3)border-image-width	图片边框的宽度。	
+- (css3)border-image-outset	边框图像区域超出边框的量。	
+- (css3)border-image-repeat	图像边框平铺(repeated)、铺满(rounded)、拉伸(stretched)。
 
 #### III. margin ####
 - <font color=red>**连写顺序: 先上 - 后左右 - 再下 , 从上而下 , 顺时针**</font>
@@ -399,21 +395,18 @@ div,span,td{
 	```
 - **两个盒子<font color=red>垂直相邻</font>，<font color=red>外边距以二者margin的最大值为准</font>；**
 
-- margin的 相邻合并 与 嵌套合并
+- margin的相邻合并与嵌套合并
 
 	![相邻合并](http://www.w3school.com.cn/i/ct_css_margin_collapsing_example_1.gif)
 	![嵌套合并](http://www.w3school.com.cn/i/ct_css_margin_collapsing_example_2.gif)
 
-- 空元素的上下margin合并 _ 与 _ 和其他margin合并
+- 空元素的上下margin合并_与_和其他margin合并
 
 	![空元素的上下margin合并](http://www.w3school.com.cn/i/ct_css_margin_collapsing_example_3.gif)
 	![空元素和其他margin合并](http://www.w3school.com.cn/i/ct_css_margin_collapsing_example_4.gif)
 
 - <font color=red>只有普通文档流中块框的**垂直外边距**才会发生外边距合并。**行内框、浮动框或绝对定位之间的外边距不会合并。**</font>
-	<br>
-- block 		元素块 独占一行 , margin均可以生效 , <font color=red> **margin是上下合并的**</font>；
-- inline		元素块**内容**与兄弟inline**内容共享一行**，margin 上下无效 , <font color=red> **margin是左右叠加的**</font>；
-- inline-block	元素块**形成块**与兄弟块**共享或换行**, margin均可以生效 ,<font color=red> **margin是叠加的**</font>；
+
 ---
 #### [IV. outline](http://www.w3school.com.cn/css/css_outline.asp) ####
 详情点击链接。
@@ -422,56 +415,8 @@ div,span,td{
 ### [定位方式](http://www.w3school.com.cn/cssref/pr_class_position.asp) ###
 定位方式由`position`属性决定,包括 绝对定位 和 相对定位。
 
-#### 1. 相对定位 : 基于元素本身的位置，根据 left / right / top / bottom 对元素进行平移.
-![相对定位](http://www.w3school.com.cn/i/ct_css_positioning_relative_example.gif)
 
-```css
-#box_relative {
-	position:relative;
-	left:30px;
-	top:20px;
-}
 
-```
-#### 2. 绝对定位: 不占据空间，基于父标签内部位置，<font color=red>不论原先是什么元素块，定位后变成block元素块。</font>
-
-![绝对定位](http://www.w3school.com.cn/i/ct_css_positioning_absolute_example.gif)
-
-```css
-#box_absolute {
-  position: absolute;
-  left: 30px;
-  top: 20px;
-}
-```
-注: 
-1. **绝对定位中可以使用 `z-index`设置上下层显示优先级，默认的 z-index 是 0，值越大优先级越高。**<font color=pink> ~~相对定位没有效果~~</font>
-2. **可以利用 <font color=red>绝对定位相对方向的等值(left=right top=bottom) 使 block元素块 居中。**</font>
----
-### 对齐方式 ###
-
-1. block元素块 - 上下左右居中: **可以利用 <font color=red>绝对定位相对方向的等值(left=right top=bottom) 使 block元素块 居中</font>。**
-	
-	```
-		.center{
-			position:absolute;
-			left:20%;
-			right:20%;
-			top:20%;
-			bottom:20%;
-		}
-	```
-2. block元素块 - 左右居中: `!DOCTYPE`声明下，**margin-left : auto ; margin-right : auto ; **
-
-3. 使用 `float`左右对齐
-
-	```
-	.right{
-		float:right;
-		width:300px;
-		background-color:#b0e0e6;
-		}
-	```
 
 
 

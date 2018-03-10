@@ -2,34 +2,34 @@
 
 <br>
 ## 1. background ##
-- 无论背景颜色和图片都必须设置水平和竖直的位置。其他无顺序可言。
-
-`background-repeat`|属性含义
--|-
-`repeat` 		|	默认值
-`no-repeat` 	|	不重复平铺
-`repeat-x` 	|	横向重复平铺
-`repeat-y `	|	纵向重复平铺
-
-`background-attachment` |属性含义
--|-
-`Scroll`|	默认值，**随滚动条滚动 **
-`fixed` |	不随滚动条滚动
-- 属性连写<br>
-	```
+```
 	background: url(img/HBuilder.png) red repeat-x 20px 20px;
-	```
-- `background-position`: **背景位置的设置 , 同时设置两个固定数值参数时分别代表水平和竖直的位置 ;** 
-	参数包括：固定数值，center，left，right，top，bottom , 
+```
+
+- 属性连写 无论背景颜色和图片都必须设置水平和竖直的位置。其他无顺序可言。
+
+
+
+background相关属性			|	 属性含义
+						-	|	-
+`background-repeat`			|	`repeat` 默认重复<br>`no-repeat`不重复平铺<br>`repeat-x` 横向重复平铺<br>`repeat-y `纵向重复平铺
+`background-attachment` 	|	`Scroll`默认值，**随滚动条滚动 **<br>`fixed`不随滚动条滚动
+`background-position`		|	**背景位置的设置 , 同时设置两个固定数值参数时分别代表水平和竖直的位置 ;** 参数包括：固定数值，center，left，right，top，bottom
+`(CSS3)background-clip`		|	背景颜色的定位区域，<br>包括 `content-box`、`padding-box`、`border-box`
+`(CSS3)background-size`		|	背景图片大小,先宽后高
+`(CSS3)background-origin`	|	背景图片的定位区域，<br>包括 `content-box`、`padding-box`、`border-box`
 	
-	```
-	background-position: center center;
-	background-position: bottom right;
-	background-position: 30% 20%; 
-	background-position: 30px 20px;
-	background-position-x: center;
-	background-position-y: center;
-	```
+```
+background-position: center center;
+background-position: bottom right;
+background-position: 30% 20%; 
+background-position: 30px 20px;
+background-position-x: center;
+background-position-y: center;
+```
+背景图片的定位区域如下:
+![背景图片的定位区域](http://www.w3school.com.cn/i/background-origin.gif)
+
 ---
 ## 2. text ##
 属性				|	描述
@@ -65,12 +65,7 @@
 
 ---
 
-
-
-
-
----
-## 列表list ##
+## 3. 列表list ##
 主要设置列表前方的标志。
 
 属性				|	描述
@@ -101,29 +96,35 @@ armenian			|	有序：传统的亚美尼亚编号方式
 ...					|	...
 
 ---
-## 表格 table、tr、th、td ##
+## 4. 表格 table、tr、th、td ##
 - **默认table及table的所有子元素都有边框border但宽度为0。**
 - 文字对齐方式`text-align`,`vertical-align`
 
-属性				|	描述
-			:-		|	:-
-`visibility`			|	**应用于行是否可见**<br>`visibility : collapse`不可见，收缩空间<br>`visibility : hidden` 不可见，保留空间<br>`visibility : visible` 可见 
+属性						|	描述
+			:-			|	:-
 **`border-collapse`**	|	**设置是否把表格边框合并为单一的边框。<br> `= collapse` 合并内外部边框；<br> `= separate` 显示内外部边框；**
+**`border-spacing`**	|	**单元格边框的距离**
 **`text-align`**		|	文字**左、中、右**对齐
 **`vertical-align`**	|	文字**上、中、下**对齐
-**`border-spacing`**	|	**单元格边框的距离**
 **`caption-side`	**	|	**设置表格标题的位置，与`<caption></caption>`一起使用。**
 `empty-cells`			|	设置是否显示表格中的空单元格。<br> `= hide` 隐藏空的单元格；<br> `= show` 显示空的单元格；
 `table-layout`			|	设置显示单元、行和列的算法。
----
-## 动作变换(transform) ##
 
-### 旋转(rotate) ###
-```
-transform:rotate(30deg);
--ms-transform:rotate(30deg); /* IE 9 */
--moz-transform:rotate(30deg); /* Firefox */
--webkit-transform:rotate(30deg); /* Safari and Chrome */
--o-transform:rotate(30deg); /* Opera */
-```
+---
+## 5. 边框 border ##
+border属性					|	属性
+			:-				|	:-
+`border-width`				|	边框宽度
+`border-style`				|	边框样式 。<br>`solid`实线<br>`dotted`点线<br>`dashed`虚线<br>`hidden`与`none` 相同,解决应用于表时边框的冲突<br>`double`双线的宽度等于 `border-width` 的值。
+`border-color`				|	边框颜色
+`(css3)border-radius`		|	创建圆角
+`(css3)box-shadow`			| 	`h-shadow`(水平)<br>`v-shadow`(竖直)<br>`blur`(模糊距离)<br>`spread`(阴影尺寸)<br>`color`(阴影颜色)<br>`inset`(外/内部阴影)
+`(css3)border-image`		|	由以下属性构成:
+`(css3)border-image-source`	|	边框图片路径。	
+`(css3)border-image-slice`	|	边框图片向内偏移。	
+`(css3)border-image-width`	|	边框图片的宽度。	
+`(css3)border-image-outset`	|	边框图像区域超出边框的量。	
+`(css3)border-image-repeat`	|	图像边框平铺(`repeated`)、铺满(`rounded`)、拉伸(`stretched`)。
+
+
 ---
