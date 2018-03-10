@@ -415,9 +415,4 @@ div,span,td{
 ### [定位方式](http://www.w3school.com.cn/cssref/pr_class_position.asp) ###
 定位方式由`position`属性决定,包括 绝对定位 和 相对定位。
 
-
-
-
-
-
 ---

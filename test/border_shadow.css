@@ -1,0 +1,40 @@
+div {
+	width: 500px;
+	height: 300px;
+	background: deeppink;
+	border: 10px solid transparent;
+	padding: 10px;
+	-webkit-border-image: url(img/border.png) 30 20 round;
+}
+
+.bg_test {
+	border: 5px solid transparent;
+	margin: 10px;
+	padding: 20px;
+	background-color: pink;
+	background-clip: border-box/*content-box*/
+	/*padding-box*/
+	;
+	color: black;
+	text-align: center;
+	display: block;
+	word-wrap: break-word;
+}
+
+.transforms {
+	height: 450px;
+	width: 600px;
+	color: pink;
+	background-color: darkviolet;
+	box-shadow: 10px 10px 5px grey;
+	margin: 100px auto 100px;
+	-webkit-transform: /*rotate(10deg)*/
+	/*scale(1,1)*/
+	/*skew(0deg,0deg) */
+	/*translate(0px,0px)*/
+	/* translate3d(0px,0px,10px) */
+	/*rotate3d(1,1,1,0deg)*/
+	scale3d(1, 1, 1);
+	/*transform:rotate(10deg)*/
+	/*animation-timing-function: ease linear ease-in ease-out ease-in-out step-start step-end;*/
+}
