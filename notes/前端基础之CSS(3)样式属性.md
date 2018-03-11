@@ -48,10 +48,15 @@ background-position-y: center;
 `font-family`			|	字体，**多个字体名称用于向后逐个兼容**
 `(CSS3)text-shadow`	|	文本阴影，包含 ：<br>`h-shadow`　　向右的阴影宽度<br>`v-shadow`　　向下的阴影宽度<br>`blur`　　　　阴影模糊半径<br>`color`　　　阴影颜色
 `(CSS3)word-wrap`	|	`break-word` 　　文本中长单词可拆分换行
+`(CSS3)column-count`	|	文字分为水平方向 N 列显示
+`(CSS3)column-gap`		| 	列之间的间隔大小
+`(CSS3)column-rule`<br>需兼容		|	`column-rule-color`	列间隔的颜色。<br><br>`column-rule-style`	列间隔的样式。包括 `none.hidden.dotted.dashed.solid.`<br>`double.groove.ridge.inset.outset`<br><br>`column-rule-width` 	列间隔的宽度。包括: <br>`固定值.thin.medium.thick`
+`(CSS3)column-width`		|	每列的宽度,可固定数值 <br>`auto` 浏览器决定列宽
+`(CSS3)column-span`		|	[**父标签分列的情况下, 当前标签可以跨越的列数**](http://www.w3school.com.cn/cssref/pr_column-span.asp)<br>`all`　　完全展开<br> `1`　　　只跨越一列
 
 `white-space`值	|	空格	|	换行	|	自动换行
-			:-	|	----		|	----		|	-
-`normal`			|	合并	|	忽略	|	允许
+			:-	|	----|	-	|	----	
+`normal`		|	合并	|	忽略	|	允许
 `nowrap`		|	合并	|	忽略	|	不允许
 `pre`			|	保留	|	保留	|	不允许
 `pre-wrap`		|	保留	|	保留	|	允许
